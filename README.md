@@ -2,17 +2,11 @@
 Code and Data for the [paper](https://arxiv.org/abs/2304.12206) "PAXQA: Generating Cross-lingual Question Answering Examples at Training Scale" at EMNLP 2023 (Findings).
 
 ## PAXQA Data
-The PAXQA test and validation sets are available at [this link](https://huggingface.co/datasets/manestay/paxqa_val_test) in the HuggingFace hub. This consists of 1788 QA examples total.
-The fields are consistent with the MLQA (and therefore SQuAD) fields.
+We release the PAXQA datasets on the HuggingFace Hub. The fields are consistent with the MLQA (and therefore SQuAD) fields.
 
-As the train data is much larger (662k examples), we release them in ZIP files (which also include the test and validation sets): \
-[PAXQA human-aligned](https://drive.google.com/file/d/1GpUAuX93NgZZKtCOagAabF0kk72ANWcW/view?usp=share_link) \
-Contents:
-* `gale_ar-en_tnmt` and `gale_zh-en_tnmt` directories: saved with the [`datasets`](https://huggingface.co/docs/datasets/index) library, load with `datasets.load_from_disk(DIRECTORY_NAME)`.
-* `gale_{lang}_{split}.jsonl` files: same data as the directories in an alternate format.
+The PAXQA test and validation sets are available at [this link](https://huggingface.co/datasets/manestay/paxqa_val_test), and consists of 1788 QA examples total.
 
-[PAXQA automatically-aligned](https://drive.google.com/file/d/1jj1xGNUn53352rS8M-Va2mx9SSljLi-f/view?usp=share_link)
-Contents are organized similarly to the prior ZIP.
+The PAXQA train sets are available at [this link](https://huggingface.co/datasets/manestay/paxqa_train), and consists of 660K QA examples total. PAXQA_HWA are the 2 `*gale*` datasets, while PAXQA_AWA are the other 5 datasets.
 
 ### Dataset sizes 
 Table 1 of the paper gives the number of QA examples for each split and each language:
